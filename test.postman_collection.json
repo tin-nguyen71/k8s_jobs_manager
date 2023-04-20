@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "2e3849d2-fd9e-4faa-b559-4541c65950b0",
+		"name": "example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17679924"
+	},
+	"item": [
+		{
+			"name": "Create a normal job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jobs-manager-stag.itv-example.today/jobs",
+					"protocol": "http",
+					"host": [
+						"jobs-manager-stag",
+						"itv-example",
+						"today"
+					],
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://jobs-manager-stag.itv-example.today/jobs/stats",
+					"protocol": "http",
+					"host": [
+						"jobs-manager-stag",
+						"itv-example",
+						"today"
+					],
+					"path": [
+						"jobs",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a schedule job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://jobs-manager-stag.itv-example.today/jobs/schedule",
+					"protocol": "http",
+					"host": [
+						"jobs-manager-stag",
+						"itv-example",
+						"today"
+					],
+					"path": [
+						"jobs",
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health_check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/health_check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"health_check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

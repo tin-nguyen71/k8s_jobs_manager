@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobmanager
+  labels:
+    app: jobmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jobmanager
+  template:
+    metadata:
+      labels:
+        app: jobmanager
+    spec:
+      containers:
+      - name: jobmanager
+        image: nguyentin/itv_manage_job_k8s:v8
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - secretRef:
+            name: managejob
